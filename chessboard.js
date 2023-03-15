@@ -1,9 +1,27 @@
-function chessboard() {
-   // your code goes here
-   
+function chessboard(coordinates) {
+   let arrayNumber = ["1", "2", "3", "4", "5", "6", "7", "8"];
+   let arrayLetter = ["a", "b", "c", "d", "e", "f", "g", "h"];
+   let newArray = [];
+
+   for (let i = 0; i < arrayLetter.length; i++) {
+      let row = [];
+      for (let j = 0; j < arrayNumber.length; j++) {
+        row.push(arrayLetter[i] + " - " + arrayNumber[j]);
+      }
+      console.log(row);
+      newArray.push(row);
+    }
+    
+    console.log(newArray)
+    return newArray;
+    
+    
 }
 
-console.log(chessboard())
+chessboard(8)
+
+
+
 //* expected output:
 
 // [
