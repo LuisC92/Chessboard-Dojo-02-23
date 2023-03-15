@@ -1,9 +1,22 @@
 function chessboard() {
-   // your code goes here
-   
+   const board = [];
+   const letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h'];
+   const numbers = ['1', '2', '3', '4', '5', '6', '7', '8'];
+
+   for (let i = 0; i < letters.length; i++) {
+      const row = [];
+      for (let j = 0; j < numbers.length; j++) {
+        row.push(`${letters[i]} - ${numbers[j]}`);
+      }
+      board.push(row);
+    }
+    
+    return board;
+  
 }
 
 console.log(chessboard())
+
 //* expected output:
 
 // [
