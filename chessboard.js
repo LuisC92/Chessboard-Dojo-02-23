@@ -1,9 +1,48 @@
-function chessboard() {
-   // your code goes here
+// function chessboard() {
+//    // create an array to store all chessboard
+//    const chessboard = []
+//    // create an array with the letters
+//    const lettersArray = ["a","b","c","d","e","f","g","h"]
+//    // create an array with the numbers
+//    const numbersArray = ["1","2","3","4","5","6","7","8"]
+
+//    // create a nested loop
+//       // external loop for letters
+//       for(let i = 0; i < lettersArray.length; i++){
+//          // create an array to store the row
+//          const row = []
+//          // inner loop for numbers
+//          for(let j = 0; j < numbersArray.length; j++){
+//             // push "letter - number" to the row
+//             row.push(`${lettersArray[i]} - ${numbersArray[j]}`)
+//          }
+//          // push our row in the chessboard
+//          chessboard.push(row)
+//       }
+//    // return chessboard 
+//    return chessboard
+// }
+
+//! using map method on the array
+const chessboard = () => {
+   const lettersArray = ["a","b","c","d","e","f","g","h"]
+   const numbersArray = ["1","2","3","4","5","6","7","8"]
+   const chessboard = []
    
+   lettersArray.map(letter => {
+      console.log("letter: ", letter)
+      const row = []
+      numbersArray.map(number =>{
+         row.push(`${letter} - ${number}`)
+      })
+      console.log("row: ", row)
+      chessboard.push(row)
+   })
+   return chessboard
 }
 
-console.log(chessboard())
+
+console.log("chessboard: ", chessboard())
 //* expected output:
 
 // [
